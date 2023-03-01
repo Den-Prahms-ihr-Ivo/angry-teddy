@@ -63,6 +63,12 @@ def play():
 
   led_queue.put((LED_Mode.song, led_strip, PLAYLIST_MAPPING[current_playlist]))
 
+def stop():
+  """Stoppt den aktuellen Song, da manche Soundfiles viel zu lang sind."""
+  player=TeddyPlayer() 
+  player.stop()
+  player.quit()
+
 def advance_playlist():
   """Wählt die nächste Playlist aus und zeigt die aktuelle Playlist durch einen Farbcode an."""
   global current_playlist, led_strip
@@ -96,10 +102,8 @@ def shutdown_callback(button):
 
 def empty_callback(button):
   """Vorbereiteted Callback für den noch leeren Knopf"""
-  global current_playlist, led_strip
-
   print("Empty Button was pressed")
-  led_queue.put((LED_Mode.song, led_strip, PLAYLIST_MAPPING[current_playlist]))
+  stop()
 
 
 def refresh_movement_detector():
