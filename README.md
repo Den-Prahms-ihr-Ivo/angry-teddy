@@ -1,6 +1,6 @@
 # Ein wütender Teddy
 
-Ein Teddybär, der dich beim Betreten des Zimmers anschreit.
+Ein Teddybär, der dich beim Betreten des Zimmers anschreit...
 
 Die Schritte, zum Einrichten des Raspberrys, habe ich leider nicht dokumentiert.
 Auch die, beim Start ausgeführten, Scripts sind hier nicht zu finden
